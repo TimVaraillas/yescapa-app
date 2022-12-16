@@ -19,8 +19,7 @@ const activeIndex = ref("0");
         height="50"
       />
       <div class="flex-grow" />
-      <el-menu-item index="0" route="/">Home</el-menu-item>
-      <el-menu-item index="1" route="/about">About</el-menu-item>
+      <el-menu-item index="0" route="/">Véhicules</el-menu-item>
     </el-menu>
   </header>
 
