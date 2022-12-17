@@ -1,39 +1,41 @@
 <template>
   <el-card class="item" :body-style="{ padding: '0px' }">
-    <img
-      :src="internalVehicle.pictures[0].url"
-      onerror="this.onerror=null; this.src='/sample.jpg'"
-      class="image"
-    />
-    <div class="info">
-      <div class="top">
-        <span class="title">{{ internalVehicle.title }}</span>
-        <span class="price">
-          <span class="small">à partir de</span>
-          {{ internalVehicle.starting_price }}€
-        </span>
-      </div>
-      <div class="middle">
-        <span class="city">{{ internalVehicle.vehicle_location_city }}</span>
-      </div>
-      <div class="bottom">
-        <div class="beds-seats">
-          <span class="beds">
-            {{ internalVehicle.vehicle_beds }}
-            <font-awesome-icon icon="fa-solid fa-bed" />
-          </span>
-          <span class="separator">•</span>
-          <span class="seats">
-            {{ internalVehicle.vehicle_seats }}
-            <font-awesome-icon icon="fa-solid fa-chair" />
+    <router-link :to="`/vehicle/${internalVehicle.id}`">
+      <img
+        :src="internalVehicle.pictures[0].url"
+        onerror="this.onerror=null; this.src='/sample.jpg'"
+        class="image"
+      />
+      <div class="info">
+        <div class="top">
+          <span class="title">{{ internalVehicle.title }}</span>
+          <span class="price">
+            <span class="small">à partir de</span>
+            {{ internalVehicle.starting_price }}€
           </span>
         </div>
-        <div class="rate">
-          <el-rate v-model="internalVehicle.review_average" disabled />
-          <span>{{ internalVehicle.review_count }} avis</span>
+        <div class="middle">
+          <span class="city">{{ internalVehicle.vehicle_location_city }}</span>
+        </div>
+        <div class="bottom">
+          <div class="beds-seats">
+            <span class="beds">
+              {{ internalVehicle.vehicle_beds }}
+              <font-awesome-icon icon="fa-solid fa-bed" />
+            </span>
+            <span class="separator">•</span>
+            <span class="seats">
+              {{ internalVehicle.vehicle_seats }}
+              <font-awesome-icon icon="fa-solid fa-chair" />
+            </span>
+          </div>
+          <div class="rate">
+            <el-rate v-model="internalVehicle.review_average" disabled />
+            <span>{{ internalVehicle.review_count }} avis</span>
+          </div>
         </div>
       </div>
-    </div>
+    </router-link>
   </el-card>
 </template>
 
@@ -54,6 +56,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .item {
   flex: 0 0 370px;
 }

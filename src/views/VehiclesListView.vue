@@ -19,7 +19,7 @@ export default defineComponent({
     };
   },
   methods: {
-    async fetchVehicles() {
+    async loadVehicles() {
       const response = await axios.get<any>(
         "https://gitlab.com/api/v4/snippets/2095016/raw"
       );
@@ -27,7 +27,7 @@ export default defineComponent({
     },
   },
   async mounted() {
-    await this.fetchVehicles();
+    await this.loadVehicles();
   },
 });
 </script>

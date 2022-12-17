@@ -6,8 +6,8 @@ import router from './router'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faBed, faChair } from '@fortawesome/free-solid-svg-icons'
-library.add(faBed, faChair)
+import { faBed, faChair, faComments } from '@fortawesome/free-solid-svg-icons'
+library.add(faBed, faChair, faComments)
 
 import './assets/main.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
