@@ -61,7 +61,7 @@ a {
   text-decoration: inherit;
 }
 .item {
-  flex: 0 0 370px;
+  flex: 0 0 calc(25% - 20px);
 }
 .image {
   height: 280px;

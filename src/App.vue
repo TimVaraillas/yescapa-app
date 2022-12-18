@@ -23,9 +23,7 @@ const activeIndex = ref("0");
     </el-menu>
   </header>
 
-  <div class="container">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
 
 <style scoped>
@@ -40,9 +38,5 @@ const activeIndex = ref("0");
 a {
   color: inherit;
   text-decoration: inherit;
-}
-.container {
-  width: 1170px;
-  margin: 0 auto;
 }
 </style>

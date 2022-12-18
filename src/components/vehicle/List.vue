@@ -21,7 +21,6 @@ export default defineComponent({
 
 <style scoped>
 .item-container {
-  margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
 }

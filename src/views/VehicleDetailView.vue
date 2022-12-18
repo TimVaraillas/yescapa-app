@@ -1,7 +1,5 @@
 <template>
-  <main>
-    <Detail :vehicle="vehicle" />
-  </main>
+  <Detail :vehicle="vehicle" />
 </template>
 
 <script lang="ts">
